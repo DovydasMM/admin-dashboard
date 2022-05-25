@@ -1,5 +1,6 @@
 body{
-
+display:flex;
+flex-direction: column;
 }
 
 
@@ -7,6 +8,7 @@ body{
   display:grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr 5fr;
+  background-color: rgb(93, 92, 97);
 }
 
 
@@ -14,49 +16,58 @@ body{
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-column: 2/3;
-  border-style: solid;
-  border-color: red;
+  background-color: rgb(255, 60, 60);
 }
 
 .sidebar{
   grid-row-start: 1;
   grid-row-end: 3;
-  border-style: solid;
-  border-color: rgb(56, 48, 173);
+  background-color: rgb(85, 85, 238);
 }
 .content{
-  border-style: solid;
-  border-color: rgb(163, 6, 168);
   display:grid;
   grid-template-columns: 4fr 1fr;
 }
 
 .projects{
+  margin: 16px;
+  display:grid;
   grid-column: 1/2;
-  border-style: solid;
+  gap:15px;
+  background-color: rgb(93, 92, 97);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: repeat(2, 1fr);
 }
 .item{
-height: 50px;
-width: 50px;
-border-style: solid;
-border-color: rgb(163, 6, 168);
+display:flex;
+flex-direction: column;
+background-color: rgb(255, 255, 255);
+
 }
 .contentRight{
   display:grid;
   grid-template-rows: 1fr 1fr;
 }
-.anouncements{
-  display:flex;
-  flex-direction: column;
+.anouncements,
+.trending{
   margin-top: 12px;
   gap:12px;
+  margin-right: 32px;
 }
 
-.trending{
-  display:flex;
-  flex-direction: column;
-}
+
 .anouncementsGrid{
   display:grid;
   grid-template-rows: 1fr 1fr 1fr;
+  background-color: rgb(255, 255, 255);
+}
+.trendingGrid{
+  display:grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  background-color: rgb(255, 255, 255);
+}
+
+.itemTitle{
+  font-weight: bold;
+  font-size: 18px;
 }
