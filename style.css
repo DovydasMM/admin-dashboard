@@ -1,6 +1,7 @@
 body{
 margin:0;
 padding:0;
+
 }
 
 
@@ -8,7 +9,7 @@ padding:0;
   display:grid;
   grid-template-columns: 250px 5fr;
   grid-template-rows: auto 1fr;
-  background-color: rgb(93, 92, 97);
+  background-color: rgb(255, 255, 255);
 }
 
 
@@ -17,6 +18,7 @@ padding:0;
   grid-template-rows: 1fr 1fr;
   grid-column: 2/3;
   background-color: rgb(255, 255, 255);
+  margin-bottom: 33px;
 }
 
 input{
@@ -34,23 +36,40 @@ input{
 .icons{
   height: 30px;
   width: 30px;
+  border-radius: 100%;
 }
 .bigIcon{
-  height: 50px;
-  width: 50px;
+  height: 75px;
+  width: 75px;
+  border-radius: 100%;
 }
 
 .rightSide{
   display:flex;
-  align-content: center;
+  align-items: center;
   padding-left: 32px;
-  padding-right: 24px;
+  padding-right: 50px;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.rightSideBottom{
+  display:flex;
+  align-items: center;
+  padding-left: 32px;
+  padding-right: 50px;
+  justify-content: center;
+  flex-direction: row;
+  gap:16px;
+
 }
 .userName{
   font-size: 24px;
   font-family: monospace;
   font-weight: bold;
   padding-left: 12px;
+  display: flex;
+  
 }
 
 .headerTop{
@@ -63,7 +82,41 @@ input{
   padding-bottom: 24px;
 }
 .headerBottom{
+  margin-left: 25px;
+  display:flex;
+  justify-content: space-between;
   
+}
+button{
+  background-color: #60a5fa;
+  color: white;
+  width: 120px;
+  height: 60px;
+  border-radius: 16px;
+  font-weight: bold;
+  font-size: 24px;
+}
+.buttons{
+  gap:16px;
+  
+}
+
+.iconText{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 16px;
+}
+.smallText{
+font-size: 20px;
+font-weight: bold;
+padding-bottom: 6px;
+font-family: monospace;
+}
+.bigText{
+  font-size: 26px;
+font-weight: bold;
+font-family: monospace;
 }
 
 
@@ -106,14 +159,14 @@ input{
 }
 
 
-
+/* CARDS */
 
 .projects{
   margin: 16px;
   display:grid;
   grid-column: 1/2;
-  gap:15px;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap:30px;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(2, 1fr);
   
 }
@@ -121,16 +174,57 @@ input{
 display:flex;
 flex-direction: column;
 background-color: rgb(255, 255, 255);
-min-height: 250px;
+height: 250px;
+width: auto;
+border-left: #60a5fa solid;
+border-width: 12px;
+border-radius: 16px;
+justify-content: space-evenly;
+}
+.itemContent{
+  width: clamp(18ch, 38ch);
+  margin: 16px;
+}
+.itemTitle{
+  font-weight: bold;
+  font-size: 18px;
+  margin-left:16px;
+  margin-top:16px;
+}
+
+.itemSide{
+  padding-left: 16px;
+  padding-top: 16px;
+}
+
+.itemTitle{
+  font-size: 26px;
+}
+.itemContent{
+  font-size: 20px;
+}
+.itemFooter{
+  display: flex;
+  justify-content: end;
+  padding-right: 36px;
+  gap:16px;
+  align-content: flex-end;
 
 }
+
+.itemIcons{
+  width: 30px;
+  height: 30px;
+  text-align: end;
+}
+
 .contentRight{
   display:grid;
   grid-template-rows: 1fr 1fr;
+  padding-top: 16px;
 }
 .anouncements,
 .trending{
-  margin-top: 12px;
   gap:12px;
   margin-right: 32px;
 }
@@ -147,10 +241,6 @@ min-height: 250px;
   background-color: rgb(255, 255, 255);
 }
 
-.itemTitle{
-  font-weight: bold;
-  font-size: 18px;
-}
 img{
   height: 24px;
   width: 24px;
@@ -160,4 +250,16 @@ img{
 .dashboardImage{
   height: 36px;
   width: 36px;
+}
+
+.sectionName, .itemsSide{
+  font-size: 38px;
+  font-family: monospace;
+  font-weight: bold;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.textContent{
+  margin-top: -24px;
 }
