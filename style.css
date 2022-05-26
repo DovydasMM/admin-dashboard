@@ -1,14 +1,16 @@
 body{
 margin:0;
 padding:0;
-
 }
 
+html{
+  background-color: rgb(255, 255, 255);
+}
 
 .container{
   display:grid;
-  grid-template-columns: 250px 5fr;
-  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr 6fr;
+  grid-template-rows: 200px 1fr;
   background-color: rgb(255, 255, 255);
 }
 
@@ -64,7 +66,7 @@ input{
 
 }
 .userName{
-  font-size: 24px;
+  font-size: 13px;
   font-family: monospace;
   font-weight: bold;
   padding-left: 12px;
@@ -90,11 +92,11 @@ input{
 button{
   background-color: #60a5fa;
   color: white;
-  width: 120px;
-  height: 60px;
-  border-radius: 16px;
+  width: 90px;
+  height: 30px;
+  border-radius: 8px;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 16px;
 }
 .buttons{
   gap:16px;
@@ -108,13 +110,13 @@ button{
   padding-left: 16px;
 }
 .smallText{
-font-size: 20px;
+font-size: 14px;
 font-weight: bold;
 padding-bottom: 6px;
 font-family: monospace;
 }
 .bigText{
-  font-size: 26px;
+  font-size: 18px;
 font-weight: bold;
 font-family: monospace;
 }
@@ -174,12 +176,14 @@ font-family: monospace;
 display:flex;
 flex-direction: column;
 background-color: rgb(255, 255, 255);
-height: 250px;
+height: 125px;
 width: auto;
 border-left: #60a5fa solid;
 border-width: 12px;
 border-radius: 16px;
 justify-content: space-evenly;
+padding: 30px 20px 20px 20px
+;
 }
 .itemContent{
   width: clamp(18ch, 38ch);
@@ -198,10 +202,11 @@ justify-content: space-evenly;
 }
 
 .itemTitle{
-  font-size: 26px;
+  font-size: 18px;
+  padding-top: 8px;
 }
 .itemContent{
-  font-size: 20px;
+  font-size: 15px;
 }
 .itemFooter{
   display: flex;
@@ -253,7 +258,7 @@ img{
 }
 
 .sectionName, .itemsSide{
-  font-size: 38px;
+  font-size: 22px;
   font-family: monospace;
   font-weight: bold;
   padding-top: 16px;
