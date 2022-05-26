@@ -232,8 +232,19 @@ padding: 30px 20px 20px 20px
 .trending{
   gap:12px;
   margin-right: 32px;
+  
+}
+.anouncementsContent{
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 12px;
 }
 
+
+
+.anouncementsText{
+  font-weight:normal
+}
 
 .anouncementsGrid{
   display:grid;
