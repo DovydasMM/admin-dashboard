@@ -7,7 +7,7 @@ padding:0;
 .container{
   display:grid;
   grid-template-columns: 250px 5fr;
-  grid-template-rows: 75px 5fr;
+  grid-template-rows: auto 1fr;
   background-color: rgb(93, 92, 97);
 }
 
@@ -16,20 +16,69 @@ padding:0;
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-column: 2/3;
-  background-color: rgb(255, 60, 60);
+  background-color: rgb(255, 255, 255);
 }
+
+input{
+  background-color: rgb(181, 181, 192);
+  border-radius: 10px;
+  width: 550px;
+  height: 24px;
+
+}
+
+.leftSide{
+  display:flex;
+  justify-content: flex-start
+}
+.icons{
+  height: 30px;
+  width: 30px;
+}
+.bigIcon{
+  height: 50px;
+  width: 50px;
+}
+
+.rightSide{
+  display:flex;
+  align-content: center;
+  padding-left: 32px;
+  padding-right: 24px;
+}
+.userName{
+  font-size: 24px;
+  font-family: monospace;
+  font-weight: bold;
+  padding-left: 12px;
+}
+
+.headerTop{
+  margin-left: 25px;
+  margin-top: 25px;
+  display: flex;
+  gap: 12px;
+  align-content: center;
+  justify-content: space-between;
+  padding-bottom: 24px;
+}
+.headerBottom{
+  
+}
+
 
 .sidebar{
   grid-row-start: 1;
   grid-row-end: 3;
-  background-color: rgb(85, 85, 238);
+  background-color: #60a5fa;
   color: white;
   font-weight: bold;
   font-family: monospace;
   display:flex;
   flex-direction: column;
   padding: 8px;
-  padding-left: 20px;
+  padding-left: 8px;
+  padding-top: 24px;
 }
 
 .sidebarName{
@@ -52,12 +101,18 @@ padding:0;
   grid-template-columns: 4fr 1fr;
 }
 
+.content, .projects{
+  background-color: #e2e8f0;
+}
+
+
+
+
 .projects{
   margin: 16px;
   display:grid;
   grid-column: 1/2;
   gap:15px;
-  background-color: rgb(93, 92, 97);
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-template-rows: repeat(2, 1fr);
   
