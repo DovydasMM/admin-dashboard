@@ -257,9 +257,27 @@ padding: 30px 20px 20px 20px
   background-color: rgb(255, 255, 255);
 }
 .trendingGrid{
-  display:grid;
+  padding: 12px 0px;
+  display:flex;
+  flex-direction: column;
+  border-radius: 10px;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   background-color: rgb(255, 255, 255);
+  gap:16px;
+}
+.trendingContent{
+  display:flex;
+}
+
+.trendingTextPlace{
+  display: flex;
+  flex-direction: column;
+  margin-left: 12px;
+  font-size: 16px;
+}
+.trendingIcon{
+  height: 36px;
+  width: 36px;
 }
 
 img{
