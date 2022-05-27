@@ -168,15 +168,15 @@ font-family: monospace;
   display:grid;
   grid-column: 1/2;
   gap:30px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /*grid-template-rows: repeat(auto-fit, minmax(350px, 1fr));*/
   
 }
 .item{
 display:flex;
 flex-direction: column;
 background-color: rgb(255, 255, 255);
-height: 125px;
+height: auto;
 width: auto;
 border-left: #60a5fa solid;
 border-width: 12px;
@@ -186,7 +186,7 @@ padding: 30px 20px 20px 20px
 ;
 }
 .itemContent{
-  width: clamp(18ch, 38ch);
+  max-width: 55ch;
   margin: 16px;
 }
 .itemTitle{
@@ -237,9 +237,13 @@ padding: 30px 20px 20px 20px
 .anouncementsContent{
   font-weight: bold;
   padding: 12px;
-  border-radius: 12px;
+  border-bottom-style: solid;
+  border-width: 1px;
+  bottom: 50%;
 }
-
+.anouncementsGrid :nth-child(3){
+  border-style: none;
+}
 
 
 .anouncementsText{
@@ -247,8 +251,9 @@ padding: 30px 20px 20px 20px
 }
 
 .anouncementsGrid{
-  display:grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  display:flex;
+  flex-direction: column;
+  border-radius: 10px;
   background-color: rgb(255, 255, 255);
 }
 .trendingGrid{
